@@ -537,7 +537,7 @@
       })).then(function () { return blobs.length; });
     }).then(function (cnt) {
       document.body.classList.add("printing");
-      setSt("outSt", "印刷画面を開きました(紙" + cnt + "枚)。パソコンでは倍率を「100%」にしてください。");
+      setSt("outSt", "印刷画面を開きました(紙" + cnt + "枚)。パソコンでは倍率を「100%」に。");
       track("kairan_print", stats(C, cnt));
       setTimeout(function () { window.print(); }, 50);
     }).catch(function () { clearPrint(); setSt("outSt", "印刷用の画像を作れませんでした。ページを読み込み直して、もう一度お試しください。", true); }).then(function () { busyFlag = false; });
